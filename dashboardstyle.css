@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  background: #000c1c;
+}
+
+.top {
+  height: 70px;
+  background: #7dd3fc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.top h1 {
+  color: #000c1c;
+  font-size: 22px;
+}
+
+.p {
+  text-decoration: none;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #000c1c;
+  font-size: 20px;
+}
+
+.main {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+.sidebar {
+  width: 220px;
+  background: #000c1c;
+  padding-top: 40px;
+  flex-shrink: 0;
+}
+
+.sidebar a {
+  display: block;
+  background: #7dd3fc;
+  color: #000c1c;
+  text-decoration: none;
+  padding: 15px;
+  margin-bottom: 70px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-align: left;
+}
+
+.contents {
+  flex: 1;
+  padding: 30px;
+}
+
+.cards {
+  background: #7dd3fc;
+  min-height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.card {
+  width: 330px;
+  text-align: center;
+}
+
+.card h2 {
+  width: 330px;
+  height: 140px;
+  line-height: 140px;
+  background: #000c1c;
+  border-radius: 40px;
+  color: #7dd3fc;
+  font-size: 60px;
+  text-decoration: underline;
+}
+
+.card p {
+  color: #000c1c;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.bottom-card {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+
+  .sidebar {
+    width: 180px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  .card h2 {
+    width: 280px;
+    height: 120px;
+    line-height: 120px;
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .top {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .sidebar a {
+    margin-bottom: 0;
+    width: 150px;
+    font-size: 16px;
+  }
+
+  .contents {
+    padding: 15px;
+  }
+
+  .cards {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .card h2 {
+    width: 100%;
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .top h1 {
+    font-size: 18px;
+  }
+
+  .username {
+    font-size: 16px;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar a {
+    width: 90%;
+  }
+
+  .card h2 {
+    height: 100px;
+    line-height: 100px;
+    font-size: 34px;
+    border-radius: 25px;
+  }
+
+  .card p {
+    font-size: 15px;
+  }
+}
